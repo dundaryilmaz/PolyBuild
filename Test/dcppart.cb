@@ -1,0 +1,46 @@
+#--------------------------------------------------------------------
+#
+#
+#SCRIPT FILE FOR POLYBUILD
+#
+#
+#--------------------------------------------------------------------
+# FILE PREFIX FOR OUTPUT FILES
+filename DCP_v3t
+#--------------------------------------------------------------------
+# SIMULATION BOX DIMENSIONS (ANSGTROMS)
+simulation_box 70.0 70. 120
+#--------------------------------------------------------------------
+#  BLOCK DEFINITIONS
+# blocks : number of blocks
+#block definition : origin of block lx ly lz unitcell buffer
+# block origin block dimension unitcell file buffer size
+# mos2: 6.466 5.599720
+# graph: 4.275 2.49
+blocks    2
+  0   0   0 70 70  90 2.0 void.ucell 
+  0   0 110 70 70  10 2.0 void.ucell 
+#0.0 0.0 30.0 129.320 110.60  5 graphene.ucell 0.0
+#--------------------------------------------------------------------
+# DEFECT DEFINITIONS
+#--------------------------------------------------------------------
+# defects: number of defect groups
+# block index  defect symbol defect type number of  defects def threshold
+#defects 1 
+#1 S 1 20 10.5 
+#-----------------------------
+#  POLYMER DEFINITION
+#  ---------------------------------
+#  monomer file 
+opls yes
+monomer 1
+dcpfull.mer R   
+# chain_type n_chains merperchain
+# amorph chain n_chain groups
+amorph_chain 1
+1 20 1
+#1 40 1
+#2 10 1
+#amorph_chain 18 8
+# #  number of chains mpc radius
+#cont_chain  615  12 59.0
