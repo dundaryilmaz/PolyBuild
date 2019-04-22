@@ -1,6 +1,6 @@
 module ceramic_type
     use checkbox
-    use IFPORT
+    !use IFPORT
     implicit none
     type ceramic
         integer :: n_atoms
