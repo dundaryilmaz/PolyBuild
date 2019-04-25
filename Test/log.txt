@@ -1,6 +1,6 @@
-Simulation Box :     70.00   70.00  120.00
+Simulation Box :    100.82  105.51  100.00
 Monomer name : monomer         
-Number of atoms in monomer :  42
+Number of atoms in monomer :   6
  Base Vector - 1 :   0.0000  0.0000  0.0000
  Base Vector - 2 :   2.5000  0.0000  0.0000
 Head  -0.8994  0.6512  0.0067

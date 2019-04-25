@@ -26,7 +26,7 @@ module global_variables
      integer :: atomtype
      integer :: molid,mer_index,atom_mer_index
      integer :: index
-     real*8 :: charge
+     real*8 :: charge,mass
      real*8 ,dimension(3) :: coord
     end type
     type(allatoms) , dimension(:),allocatable :: printedatoms

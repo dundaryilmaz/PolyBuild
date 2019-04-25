@@ -187,6 +187,12 @@ module print_files
     end do
 
     write(9,*) 
+    write(9,*) ' Masses'
+    write(9,*) 
+    do i=1,n_atoms
+      write(9,*) i,printedatoms(i)%mass
+    end do
+    write(9,*) 
     write(9,*) ' Bonds'
     write(9,*) 
     do i=1,n_total_bonds
@@ -231,7 +237,7 @@ module print_files
       if ( .not. bonded) then
           print*,iatom,jatom
             print*,'iatom bonds : ',bonds(iatom,:)
-     pause
+    ! pause
       end if
      iostat=0
 
@@ -453,6 +459,7 @@ end if
           printedatoms(cnt)%atomtype=blocks(i)%atype(j)
           printedatoms(cnt)%coord=blocks(i)%coord(j,:)
           printedatoms(cnt)%molid=i
+          printedatoms(cnt)%mass=blocks(i)%mass(j)
           printedatoms(cnt)%index=cnt
 
         end if
@@ -481,6 +488,7 @@ end if
             printedatoms(cnt)%charge=chains(i)%mers(j)%charge(k)
             printedatoms(cnt)%coord=chains(i)%mers(j)%coord(k,:)
             printedatoms(cnt)%molid=n_boxes+i
+            printedatoms(cnt)%mass=chains(i)%mers(j)%mass(k)
             printedatoms(cnt)%index=cnt
             printedatoms(cnt)%mer_index = j
             printedatoms(cnt)%atom_mer_index = k
@@ -501,6 +509,7 @@ end if
         write(146,*) 'H  ',chains(i)%head(:)
         write(147,205)'HETATM',cnt,'H  ','','','',chains(i)%head(:),'H  ',0,0,0.0
             printedatoms(cnt)%symbol='H ' 
+            printedatoms(cnt)%mass=1.0
             printedatoms(cnt)%atomtype=base_mers(chains(i)%mer_id)%htype
             printedatoms(cnt)%charge=base_mers(chains(i)%mer_id)%headcharge
             printedatoms(cnt)%coord=chains(i)%head(:)
@@ -521,6 +530,7 @@ end if
             printedatoms(cnt)%charge=base_mers(chains(i)%mer_id)%tailcharge
             printedatoms(cnt)%coord=chains(i)%tail(:)
             printedatoms(cnt)%molid=n_boxes+i
+            printedatoms(cnt)%mass=1.0
             printedatoms(cnt)%index=cnt
         chains(i)%tailh_atom_index = cnt
         

@@ -1,0 +1,44 @@
+#--------------------------------------------------------------------
+#
+#
+#SCRIPT FILE FOR POLYBUILD
+#
+#
+#--------------------------------------------------------------------
+# FILE PREFIX FOR OUTPUT FILES
+filename PE
+#--------------------------------------------------------------------
+# SIMULATION BOX DIMENSIONS (ANSGTROMS)
+simulation_box 100.0 100. 100
+#--------------------------------------------------------------------
+#  BLOCK DEFINITIONS
+# blocks : number of blocks
+#block definition : origin of block lx ly lz unitcell buffer
+# block origin block dimension unitcell file buffer size
+blocks    2
+  0   0   0 100 100  10 2.0 void.ucell 
+  0   0  90 100 100  10 2.0 void.ucell 
+#--------------------------------------------------------------------
+# DEFECT DEFINITIONS
+#--------------------------------------------------------------------
+# defects: number of defect groups
+# block index  defect symbol defect type number of  defects def threshold
+#defects 1 
+#1 S 1 20 10.5 
+#-----------------------------
+#  POLYMER DEFINITION
+#  ---------------------------------
+#  monomer file 
+opls yes
+monomer 1
+pe.mer
+#diethylether.mer R   
+# chain_type n_chains merperchain
+# amorph chain n_chain groups
+amorph_chain 1
+1 100 100
+#1 40 1
+#2 10 1
+#amorph_chain 18 8
+# #  number of chains mpc radius
+#cont_chain  615  12 59.0
