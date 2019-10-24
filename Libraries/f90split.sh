@@ -15,6 +15,6 @@ fi
 rm f90split.o
 #
 chmod ugo+x a.out
-mv a.out ~/bin/$ARCH/f90split
+mv a.out f90split
 #
 echo "Program installed as ~/bin/$ARCH/f90split"
