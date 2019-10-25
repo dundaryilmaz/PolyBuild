@@ -509,7 +509,7 @@ end if
         write(146,*) 'H  ',chains(i)%head(:)
         write(147,205)'HETATM',cnt,'H  ','','','',chains(i)%head(:),'H  ',0,0,0.0
             printedatoms(cnt)%symbol='H ' 
-            printedatoms(cnt)%mass=1.0
+            printedatoms(cnt)%mass=1.008
             printedatoms(cnt)%atomtype=base_mers(chains(i)%mer_id)%htype
             printedatoms(cnt)%charge=base_mers(chains(i)%mer_id)%headcharge
             printedatoms(cnt)%coord=chains(i)%head(:)

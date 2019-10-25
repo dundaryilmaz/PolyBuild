@@ -206,11 +206,11 @@ contains
             do j=1,this%mers(i)%n_mer_atoms
                 if( this%mers(i)%symbol(j) .eq. 'C ') then
                                 ! this%mers(i)%atype(j) = 1
-                                 this%mers(i)%mass(j) = 12.0
+                                 this%mers(i)%mass(j) = 12.011
 				end if
                 if( this%mers(i)%symbol(j) .eq. 'H ') then
                                 ! this%mers(i)%atype(j) = 2
-                                 this%mers(i)%mass(j) = 1.0
+                                 this%mers(i)%mass(j) = 1.008
 				end if
                 if( this%mers(i)%symbol(j) .eq. 'O ') then
                                  !this%mers(i)%atype(j) = 3
@@ -227,6 +227,10 @@ contains
                 if( this%mers(i)%symbol(j) .eq. 'Br') then
                                  !this%mers(i)%atype(j) = 6
                                  this%mers(i)%mass(j) = 32.0
+				end if
+                if( this%mers(i)%symbol(j) .eq. 'F') then
+                                 !this%mers(i)%atype(j) = 6
+                                 this%mers(i)%mass(j) = 18.998
 				end if
             end do
         end do

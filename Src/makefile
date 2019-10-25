@@ -12,7 +12,7 @@
 
 # ------------------Macro-Defs---------------------
 F90=ifort -O3 -fopenmp
-F90=gfortran
+#F90=gfortran
 LIBS=-L../Libraries
 # -------------------End-macro-Defs---------------------------
 
