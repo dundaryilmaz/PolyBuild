@@ -6,7 +6,7 @@
 #
 #--------------------------------------------------------------------
 # FILE PREFIX FOR OUTPUT FILES
-filename DCP_v3t
+filename DCP_SINGLE
 #--------------------------------------------------------------------
 # SIMULATION BOX DIMENSIONS (ANSGTROMS)
 simulation_box 70.0 70. 120
@@ -38,7 +38,7 @@ dcpfull.mer R
 # chain_type n_chains merperchain
 # amorph chain n_chain groups
 amorph_chain 1
-1 20 1
+1 1 1
 #1 40 1
 #2 10 1
 #amorph_chain 18 8
